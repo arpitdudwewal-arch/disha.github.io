@@ -1,0 +1,37 @@
+// Project: Friendship Proposal
+// Author: [Your Name]
+// Target: Disha 💛
+
+class FriendshipRequest {
+    constructor(to) {
+        this.to = to;
+        this.status = "Pending";
+        this.cutenessLevel = 100;
+    }
+
+    send() {
+        console.log(`Hey ${this.to} 😊`);
+        console.log("I just pushed a new request to your heart repository.");
+        console.log("Would you like to accept my friend request?");
+        console.log("Benefits include:");
+        console.log("✔ Unlimited laughter");
+        console.log("✔ Daily good vibes");
+        console.log("✔ 24/7 support system");
+        console.log("✔ Random memes & smiles");
+    }
+
+    accept() {
+        this.status = "Accepted 🎉";
+        console.log("Yay! Friendship successfully installed!");
+    }
+
+    reject() {
+        this.status = "Still Hoping 🙈";
+        console.log("No worries, I'll keep improving my version!");
+    }
+}
+
+const request = new FriendshipRequest("Disha");
+request.send();
+
+// Waiting for response...
