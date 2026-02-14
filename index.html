@@ -2,82 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Friend Request to Disha 💛</title>
+    <title>A Small Request for Disha 💛</title>
     <style>
         body {
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
             font-family: 'Segoe UI', sans-serif;
-            text-align: center;
-            padding-top: 100px;
-            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         .card {
             background: white;
-            width: 400px;
-            margin: auto;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            width: 420px;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         h1 {
-            color: #ff4e8a;
+            color: #ff5e9c;
+        }
+
+        p {
+            color: #444;
+            font-size: 16px;
+            line-height: 1.6;
         }
 
         button {
-            padding: 10px 20px;
-            margin: 10px;
+            margin-top: 20px;
+            padding: 12px 25px;
             border: none;
             border-radius: 25px;
-            cursor: pointer;
+            background: #ff5e9c;
+            color: white;
             font-size: 16px;
-            transition: 0.3s;
-        }
-
-        .accept {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        .reject {
-            background-color: #ff4e4e;
-            color: white;
+            cursor: pointer;
+            transition: 0.3s ease;
         }
 
         button:hover {
-            transform: scale(1.1);
+            background: #ff2f7b;
+            transform: scale(1.05);
         }
 
-        #response {
+        #celebration {
             margin-top: 20px;
-            font-size: 18px;
-            font-weight: bold;
+            display: none;
+        }
+
+        #celebration img {
+            width: 200px;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <h1>Hey Disha 😊</h1>
-        <p>I just sent you a friend request to your heart repository 💛</p>
-        <p>Would you like to accept my friendship?</p>
+        <h1>Hi Disha 😊</h1>
 
-        <button class="accept" onclick="acceptFriend()">Accept 🎉</button>
-        <button class="reject" onclick="rejectFriend()">Reject 🙈</button>
+        <p>
+            I made this little webpage just to say something honestly.
+        </p>
 
-        <div id="response"></div>
+        <p>
+            I’m sending you a friend request because you seem like 
+            a really kind and genuine person, and I’d truly love 
+            the chance to know you better.
+        </p>
+
+        <p>
+            No pressure at all 💛  
+            Just a simple and sincere friendship request.
+        </p>
+
+        <button onclick="celebrate()">Yes, let's be friends 🌸</button>
+
+        <div id="celebration">
+            <h2>YAAAYYY!!! 🎉💃</h2>
+            <p>You just made my day 😊💛</p>
+            <img src="https://media.giphy.com/media/111ebonMs90YLu/giphy.gif" alt="Celebration GIF">
+        </div>
     </div>
 
     <script>
-        function acceptFriend() {
-            document.getElementById("response").innerHTML =
-                "Yayyy! 🎉 Friendship successfully installed! 💛😊";
-        }
-
-        function rejectFriend() {
-            document.getElementById("response").innerHTML =
-                "No worries 🙈 I’ll keep upgrading myself to v2.0 😄";
+        function celebrate() {
+            document.getElementById("celebration").style.display = "block";
         }
     </script>
 
