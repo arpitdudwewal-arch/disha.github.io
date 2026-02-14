@@ -1,37 +1,85 @@
-// Project: Friendship Proposal
-// Author: [Your Name]
-// Target: Disha 💛
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Request to Disha 💛</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding-top: 100px;
+            color: #333;
+        }
 
-class FriendshipRequest {
-    constructor(to) {
-        this.to = to;
-        this.status = "Pending";
-        this.cutenessLevel = 100;
-    }
+        .card {
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
 
-    send() {
-        console.log(`Hey ${this.to} 😊`);
-        console.log("I just pushed a new request to your heart repository.");
-        console.log("Would you like to accept my friend request?");
-        console.log("Benefits include:");
-        console.log("✔ Unlimited laughter");
-        console.log("✔ Daily good vibes");
-        console.log("✔ 24/7 support system");
-        console.log("✔ Random memes & smiles");
-    }
+        h1 {
+            color: #ff4e8a;
+        }
 
-    accept() {
-        this.status = "Accepted 🎉";
-        console.log("Yay! Friendship successfully installed!");
-    }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
 
-    reject() {
-        this.status = "Still Hoping 🙈";
-        console.log("No worries, I'll keep improving my version!");
-    }
-}
+        .accept {
+            background-color: #4CAF50;
+            color: white;
+        }
 
-const request = new FriendshipRequest("Disha");
-request.send();
+        .reject {
+            background-color: #ff4e4e;
+            color: white;
+        }
 
-// Waiting for response...
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        #response {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Hey Disha 😊</h1>
+        <p>I just sent you a friend request to your heart repository 💛</p>
+        <p>Would you like to accept my friendship?</p>
+
+        <button class="accept" onclick="acceptFriend()">Accept 🎉</button>
+        <button class="reject" onclick="rejectFriend()">Reject 🙈</button>
+
+        <div id="response"></div>
+    </div>
+
+    <script>
+        function acceptFriend() {
+            document.getElementById("response").innerHTML =
+                "Yayyy! 🎉 Friendship successfully installed! 💛😊";
+        }
+
+        function rejectFriend() {
+            document.getElementById("response").innerHTML =
+                "No worries 🙈 I’ll keep upgrading myself to v2.0 😄";
+        }
+    </script>
+
+</body>
+</html>
